@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.MainPageController">
+   <children>
+      <Label layoutX="294.0" layoutY="14.0" prefHeight="31.0" prefWidth="88.0" text="Welcome :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="382.0" layoutY="14.0" prefHeight="31.0" prefWidth="174.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView layoutX="201.0" layoutY="52.0" prefHeight="258.0" prefWidth="373.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+        </columns>
+      </TableView>
+      <Button layoutX="294.0" layoutY="332.0" mnemonicParsing="false" text="Add to cart" />
+      <Button layoutX="420.0" layoutY="332.0" mnemonicParsing="false" text="Buy Now" />
+      <Separator layoutX="178.0" layoutY="19.0" orientation="VERTICAL" prefHeight="362.0" prefWidth="7.0" />
+      <Label layoutX="22.0" layoutY="37.0" />
+      <TextField layoutX="14.0" layoutY="54.0" prefHeight="25.0" prefWidth="88.0" />
+      <Button layoutX="111.0" layoutY="54.0" mnemonicParsing="false" text="Search" />
+      <Separator layoutX="11.0" layoutY="94.0" prefHeight="5.0" prefWidth="161.0" />
+      <Button layoutX="22.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Mobile" />
+      <Button layoutX="22.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Ipad" />
+      <Button layoutX="22.0" layoutY="208.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Laptop" />
+      <Button layoutX="22.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Smart Watch" />
+      <Button fx:id="logoutButton" layoutX="25.0" layoutY="332.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="25.0" prefWidth="138.0" text="Logout" />
+   </children>
+</AnchorPane>
