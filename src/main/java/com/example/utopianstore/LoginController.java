@@ -6,22 +6,25 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class LoginController {
 
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
     @FXML
-    Label loginLabel;
+    private AnchorPane scenePane;
     @FXML
-    TextField emailTextField;
+    private TextField emailTextField;
     @FXML
-    PasswordField passwordTextField;
-    Login login = new Login();//Object of Login class
+    private PasswordField passwordTextField;
+    private Login login = new Login();//Object of Login class
 
     //Function to do action on click of login button
     public void login(ActionEvent event) throws IOException {
@@ -46,13 +49,18 @@ public class LoginController {
             stage.show();
         }
         else{
-            loginLabel.setText("Login Failed");
+            //Create alert after failed login attempt
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText("Login Failed");
+            alert.setContentText("Either wrong email or password or no account found. Try signup. ");
+
+            //Some events on click of OK button on alert
+            if(alert.showAndWait().get() == ButtonType.OK){
+                stage = (Stage) scenePane.getScene().getWindow();
+            }
         }
     }
-
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     //Function to switch to signup page on click of signup button
     public void switchToSignup(ActionEvent event) throws IOException {
