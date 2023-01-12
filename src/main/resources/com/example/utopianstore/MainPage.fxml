@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.MainPageController">
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.MainPageController">
    <children>
       <Label layoutX="294.0" layoutY="14.0" prefHeight="31.0" prefWidth="88.0" text="Welcome :">
          <font>
@@ -41,6 +41,6 @@
       <Button layoutX="22.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Ipad" />
       <Button layoutX="22.0" layoutY="208.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Laptop" />
       <Button layoutX="22.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Smart Watch" />
-      <Button fx:id="logoutButton" layoutX="25.0" layoutY="332.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="25.0" prefWidth="138.0" text="Logout" />
+      <Button fx:id="logoutButton" layoutX="25.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="138.0" text="Logout" />
    </children>
 </AnchorPane>
