@@ -5,30 +5,45 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #E0FFFF; -fx-background-image: ;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.LoginController">
    <children>
-      <Button layoutX="189.0" layoutY="195.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #8FBC8F;" text="Login" textAlignment="CENTER">
+      <Button layoutX="177.0" layoutY="205.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #8FBC8F;" text="Login" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="13.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button layoutX="351.0" layoutY="195.0" mnemonicParsing="false" onAction="#switchToSignup" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #CD5C5C;" text="Signup">
+      <Button layoutX="339.0" layoutY="205.0" mnemonicParsing="false" onAction="#switchToSignup" prefHeight="30.0" prefWidth="84.0" style="-fx-background-color: #CD5C5C;" text="Signup">
          <font>
-            <Font name="System Bold" size="13.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Label layoutX="189.0" layoutY="132.0" text="Email">
+      <Label layoutX="177.0" layoutY="120.0" text="Email">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Label layoutX="189.0" layoutY="164.0" text="Password">
+      <Label layoutX="177.0" layoutY="163.0" text="Password">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
-      <TextField fx:id="emailTextField" layoutX="263.0" layoutY="128.0" promptText="example@123.com" />
-      <PasswordField fx:id="passwordTextField" layoutX="263.0" layoutY="160.0" promptText="*********" />
+      <TextField fx:id="emailTextField" layoutX="251.0" layoutY="116.0" promptText="example@123.com">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <PasswordField fx:id="passwordTextField" layoutX="251.0" layoutY="159.0" promptText="*********">
+         <font>
+            <Font size="14.0" />
+         </font></PasswordField>
       <Separator layoutX="-271.0" layoutY="172.0" prefWidth="200.0" />
-      <AnchorPane layoutY="267.0" prefHeight="133.0" prefWidth="600.0" style="-fx-background-color: #A9A9A9;" />
+      <AnchorPane layoutY="267.0" prefHeight="133.0" prefWidth="600.0" style="-fx-background-color: #A9A9A9;">
+         <children>
+            <ImageView fx:id="logo" fitHeight="133.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../../../photos/icon.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

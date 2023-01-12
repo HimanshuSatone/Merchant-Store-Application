@@ -1,28 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.SignupController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFAF0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.SignupController">
    <children>
-      <Button layoutX="188.0" layoutY="328.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="25.0" prefWidth="168.0" text="Signup" />
-      <Label layoutX="185.0" layoutY="56.0" text="Name" />
-      <TextField layoutX="266.0" layoutY="52.0" />
-      <Label layoutX="185.0" layoutY="100.0" text="Gender" />
-      <Label layoutX="185.0" layoutY="144.0" text="Number" />
-      <TextField layoutX="266.0" layoutY="140.0" />
-      <Label layoutX="185.0" layoutY="192.0" text="City" />
-      <TextField layoutX="266.0" layoutY="188.0" />
-      <Label layoutX="185.0" layoutY="236.0" text="Email" />
-      <TextField layoutX="266.0" layoutY="232.0" />
-      <Label layoutX="185.0" layoutY="279.0" text="Password" />
-      <Button layoutX="363.0" layoutY="328.0" mnemonicParsing="false" text="Reset" />
-      <PasswordField layoutX="266.0" layoutY="275.0" />
-      <CheckBox layoutX="266.0" layoutY="100.0" mnemonicParsing="false" text="Male" />
-      <CheckBox layoutX="349.0" layoutY="100.0" mnemonicParsing="false" text="Female" />
+      <Button layoutX="165.0" layoutY="354.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #90EE90;" text="Signup">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="168.0" layoutY="51.0" text="First Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField layoutX="249.0" layoutY="47.0" promptText="Himanshu">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="168.0" layoutY="130.0" text="Gender">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="168.0" layoutY="172.0" text="Number">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField layoutX="249.0" layoutY="168.0" promptText="9625688777">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="168.0" layoutY="214.0" text="City">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField layoutX="249.0" layoutY="210.0" promptText="New Delhi">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="168.0" layoutY="256.0" text="Email">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField layoutX="249.0" layoutY="252.0" promptText="example@abc.com">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="168.0" layoutY="299.0" text="Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button layoutX="342.0" layoutY="354.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Reset">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <PasswordField layoutX="249.0" layoutY="295.0" promptText="**********">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></PasswordField>
+      <TextField layoutX="249.0" layoutY="126.0" promptText="male/female">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="167.0" layoutY="91.0" text="Last Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="248.0" layoutY="87.0" promptText="Satone">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: #000000;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

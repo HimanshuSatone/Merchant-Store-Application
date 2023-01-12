@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -18,6 +19,8 @@ public class LoginController {
     private Scene scene;
     private Parent root;
 
+    @FXML
+    ImageView logo;
     @FXML
     private AnchorPane scenePane;
     @FXML

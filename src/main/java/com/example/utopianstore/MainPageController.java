@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -29,9 +30,11 @@ public class MainPageController implements Initializable {
     @FXML
     private Label nameLabel;
     @FXML
-    private Button logoutButton;
-    @FXML
     private AnchorPane scenePane;
+    @FXML
+    private Button settingButton;
+    @FXML
+    private ImageView bannerImage;
 
     @FXML
     private TableColumn<Product,String> availability;
