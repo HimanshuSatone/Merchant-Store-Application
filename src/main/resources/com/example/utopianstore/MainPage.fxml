@@ -13,7 +13,7 @@
    <children>
       <Label layoutX="294.0" layoutY="14.0" prefHeight="31.0" prefWidth="88.0" text="Welcome :">
          <font>
-            <Font size="16.0" />
+            <Font name="Berlin Sans FB" size="16.0" />
          </font>
       </Label>
       <Label fx:id="nameLabel" layoutX="382.0" layoutY="14.0" prefHeight="31.0" prefWidth="174.0">
@@ -30,19 +30,46 @@
             <TableColumn fx:id="stock" prefWidth="75.0" text="Stock" />
         </columns>
       </TableView>
-      <Button layoutX="256.0" layoutY="326.0" mnemonicParsing="false" text="Add to cart" />
-      <Button layoutX="437.0" layoutY="326.0" mnemonicParsing="false" text="Buy Now" />
+      <Button layoutX="256.0" layoutY="326.0" mnemonicParsing="false" text="Add to cart">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="437.0" layoutY="326.0" mnemonicParsing="false" text="Buy Now">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
       <Label layoutX="22.0" layoutY="37.0" />
       <AnchorPane layoutX="8.0" layoutY="13.0" prefHeight="374.0" prefWidth="174.0" style="-fx-background-color: #F08080;" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="418.0" AnchorPane.topAnchor="13.0">
          <children>
-            <Button fx:id="searchButton" layoutX="109.0" layoutY="39.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="53.0" text="Search" />
-            <Button layoutX="11.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Mobile" />
-            <Button layoutX="11.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Ipad" />
-            <Button layoutX="11.0" layoutY="199.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Laptop" />
-            <Button layoutX="11.0" layoutY="241.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Smart Watch" />
+            <Button fx:id="searchButton" layoutX="109.0" layoutY="39.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="53.0" text="Search">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font></Button>
+            <Button layoutX="11.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Mobile">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font></Button>
+            <Button layoutX="11.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Ipad">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font></Button>
+            <Button layoutX="11.0" layoutY="199.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Laptop">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font></Button>
+            <Button layoutX="11.0" layoutY="241.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Smart Watch">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font></Button>
             <Separator layoutX="10.0" layoutY="79.0" prefHeight="3.0" prefWidth="153.0" />
-            <Button fx:id="logoutButton" layoutX="95.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="64.0" text="Logout" />
-            <Button fx:id="settingButton" layoutX="10.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="64.0" text="Settings" />
+            <Button fx:id="logoutButton" layoutX="92.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="69.0" text="Logout">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font></Button>
+            <Button fx:id="settingButton" layoutX="10.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="76.0" text="Settings">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font></Button>
             <TextField fx:id="searchTextField" layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="88.0" />
          </children>
       </AnchorPane>
