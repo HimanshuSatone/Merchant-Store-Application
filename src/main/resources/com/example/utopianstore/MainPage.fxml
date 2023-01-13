@@ -35,8 +35,7 @@
       <Label layoutX="22.0" layoutY="37.0" />
       <AnchorPane layoutX="8.0" layoutY="13.0" prefHeight="374.0" prefWidth="174.0" style="-fx-background-color: #F08080;" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="418.0" AnchorPane.topAnchor="13.0">
          <children>
-            <TextField layoutX="13.0" layoutY="39.0" prefHeight="25.0" prefWidth="88.0" />
-            <Button layoutX="110.0" layoutY="39.0" mnemonicParsing="false" text="Search" />
+            <Button fx:id="searchButton" layoutX="109.0" layoutY="39.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="53.0" text="Search" />
             <Button layoutX="11.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Mobile" />
             <Button layoutX="11.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Ipad" />
             <Button layoutX="11.0" layoutY="199.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Laptop" />
@@ -44,6 +43,7 @@
             <Separator layoutX="10.0" layoutY="79.0" prefHeight="3.0" prefWidth="153.0" />
             <Button fx:id="logoutButton" layoutX="95.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="64.0" text="Logout" />
             <Button fx:id="settingButton" layoutX="10.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="64.0" text="Settings" />
+            <TextField fx:id="searchTextField" layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="88.0" />
          </children>
       </AnchorPane>
    </children>

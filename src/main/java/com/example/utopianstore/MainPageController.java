@@ -30,22 +30,25 @@ public class MainPageController implements Initializable {
     @FXML
     private Label nameLabel;
     @FXML
-    private AnchorPane scenePane;
-    @FXML
     private Button settingButton;
     @FXML
-    private ImageView bannerImage;
+    private Button logoutButton;
+    @FXML
+    private AnchorPane scenePane;
+    @FXML
+    private Button searchButton;
+    @FXML
+    private TextField searchTextField;
 
+    //Functionality for fetching data from sql product table to our table view
     @FXML
     private TableColumn<Product,String> availability;
     @FXML
     private TableColumn<Product,Integer> id;
     @FXML
     private TableColumn<Product,String> name;
-
     @FXML
     private TableColumn<Product,Integer> price;
-
     @FXML
     private TableColumn<Product,Integer> stock;
     @FXML
@@ -65,7 +68,23 @@ public class MainPageController implements Initializable {
         tableView.setItems(products);
     }
 
-    //Function to go on Login Page on click of logout button
+    //Functionality for search button
+    public void search(ActionEvent event){
+
+        String productName = searchTextField.getText();
+        searchTextField.clear();
+
+        id.setCellValueFactory(new PropertyValueFactory<Product,Integer>("id"));
+        name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
+        price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
+        stock.setCellValueFactory(new PropertyValueFactory<Product,Integer>("stock"));
+        availability.setCellValueFactory(new PropertyValueFactory<Product,String>("availability"));
+
+        products = Product.getProductsByName(productName);
+        tableView.setItems(products);
+    }
+
+    //Functionality to go on Login Page on click of logout button
     public void logout(ActionEvent event) throws IOException {
 
         //Create alert when click on logout button
@@ -89,7 +108,7 @@ public class MainPageController implements Initializable {
         }
     }
 
-    //Function to display username on welcome bar
+    //Functionality to display username on welcome bar
     public void displayName(String userEmail){
         nameLabel.setText(userEmail);
     }

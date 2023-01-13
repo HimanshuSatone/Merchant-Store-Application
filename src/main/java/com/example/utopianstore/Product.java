@@ -67,4 +67,28 @@ public class Product {
         }
         return productList;
     }
+
+    //Function to get products by name
+    public static ObservableList<Product> getProductsByName(String productName){
+
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        ObservableList<Product> productList = FXCollections.observableArrayList();
+        String selectProduct = String.format("select * from product where lower(pname) like'%%%s%%'",productName.toLowerCase());
+        try{
+
+            ResultSet rs = databaseConnection.getQueryTable(selectProduct);
+            while(rs.next()){
+
+                productList.add(new Product(
+                        rs.getInt("pid"),
+                        rs.getString("pname"),
+                        rs.getInt("price"),
+                        rs.getString("availability"),
+                        rs.getInt("stock")));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return productList;
+    }
 }

@@ -7,10 +7,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class LoginController {
@@ -20,7 +23,7 @@ public class LoginController {
     private Parent root;
 
     @FXML
-    ImageView logo;
+    ImageView imageView;
     @FXML
     private AnchorPane scenePane;
     @FXML
@@ -28,6 +31,13 @@ public class LoginController {
     @FXML
     private PasswordField passwordTextField;
     private Login login = new Login();//Object of Login class
+
+    Image logo = new Image(new FileInputStream("C:\\Users\\Himanshu\\IdeaProjects\\UtopianStore\\src\\main\\photos\\LoginBanner.jpg"));
+
+
+
+    public LoginController() throws FileNotFoundException {
+    }
 
     //Function to do action on click of login button
     public void login(ActionEvent event) throws IOException {
