@@ -30,12 +30,20 @@ public class LoginController {
     private TextField emailTextField;
     @FXML
     private PasswordField passwordTextField;
+    @FXML
+    Button clear;
+
     private Login login = new Login();//Object of Login class
 
     Image logo = new Image(new FileInputStream("C:\\Users\\Himanshu\\IdeaProjects\\UtopianStore\\src\\main\\photos\\LoginBanner.jpg"));
 
+    //Functionality for clear button
+    public void clearButton(ActionEvent event){
 
+        emailTextField.clear();
+        passwordTextField.clear();
 
+    }
     public LoginController() throws FileNotFoundException {
     }
 
