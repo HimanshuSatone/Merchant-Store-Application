@@ -73,7 +73,7 @@ public class Product {
 
         DatabaseConnection databaseConnection = new DatabaseConnection();
         ObservableList<Product> productList = FXCollections.observableArrayList();
-        String selectProduct = String.format("select * from product where lower(pname) like'%%%s%%'",productName.toLowerCase());
+        String selectProduct = String.format("select * from product where lower(pname) like'%s%%'",productName.toLowerCase());
         try{
 
             ResultSet rs = databaseConnection.getQueryTable(selectProduct);
