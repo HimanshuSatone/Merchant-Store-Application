@@ -55,20 +55,7 @@ public class LoginController {
 
         //after successful login, go to otp verification page
         if(login.customerLogin(email,password)){
-
-//            //Way to send data from login page to Main-Page
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("MainPage.fxml"));
-//            root = loader.load();
-//
-//            //Send data from LoginController to MainPageController
-//            MainPageController mainPageController = loader.getController();
-//            mainPageController.displayName(email);
-//
-//            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//            scene = new Scene(root);
-//            stage.setScene(scene);
-//            stage.show();
-
+            
             //Send data to otp verification page
             FXMLLoader loader = new FXMLLoader(getClass().getResource("OTPFile.fxml"));
             root = loader.load();
