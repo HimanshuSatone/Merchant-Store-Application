@@ -44,7 +44,7 @@ public class MainPageController implements Initializable {
     @FXML
     private TableColumn<Product,String> availability;
     @FXML
-    private TableColumn<Product,Integer> id;
+    private TableColumn<Product,String> id;
     @FXML
     private TableColumn<Product,String> name;
     @FXML
@@ -58,15 +58,78 @@ public class MainPageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        id.setCellValueFactory(new PropertyValueFactory<Product,Integer>("id"));
+        id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
         name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
         price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
         stock.setCellValueFactory(new PropertyValueFactory<Product,Integer>("stock"));
         availability.setCellValueFactory(new PropertyValueFactory<Product,String>("availability"));
 
-        products = Product.getAllProducts();
+        products = Product.getAllMobile();
         tableView.setItems(products);
     }
+
+    @FXML
+    Button mobileButton;
+    @FXML
+    Button ipadButton;
+    @FXML
+    Button smartWatchButton;
+    @FXML
+    Button laptopButton;
+
+    //Functionality for Mobile Product button
+    public void setMobileButton(ActionEvent event){
+
+        id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
+        name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
+        price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
+        stock.setCellValueFactory(new PropertyValueFactory<Product,Integer>("stock"));
+        availability.setCellValueFactory(new PropertyValueFactory<Product,String>("availability"));
+
+        products = Product.getAllMobile();
+        tableView.setItems(products);
+    }
+
+    //Functionality for Ipad Product button
+    public void setIpadButton(ActionEvent event){
+
+        id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
+        name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
+        price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
+        stock.setCellValueFactory(new PropertyValueFactory<Product,Integer>("stock"));
+        availability.setCellValueFactory(new PropertyValueFactory<Product,String>("availability"));
+
+        products = Product.getAllIpad();
+        tableView.setItems(products);
+    }
+
+    //Functionality for Laptop Product button
+    public void setLaptopButton(ActionEvent event){
+
+        id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
+        name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
+        price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
+        stock.setCellValueFactory(new PropertyValueFactory<Product,Integer>("stock"));
+        availability.setCellValueFactory(new PropertyValueFactory<Product,String>("availability"));
+
+        products = Product.getAllLaptop();
+        tableView.setItems(products);
+    }
+
+    //Functionality for SmartWatch Product button
+    public void setSmartWatchButton(ActionEvent event){
+
+        id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
+        name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
+        price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
+        stock.setCellValueFactory(new PropertyValueFactory<Product,Integer>("stock"));
+        availability.setCellValueFactory(new PropertyValueFactory<Product,String>("availability"));
+
+        products = Product.getAllSmartWatch();
+        tableView.setItems(products);
+    }
+
+
 
     //Functionality for search button
     public void search(ActionEvent event){
@@ -74,13 +137,13 @@ public class MainPageController implements Initializable {
         String productName = searchTextField.getText();
         searchTextField.clear();
 
-        id.setCellValueFactory(new PropertyValueFactory<Product,Integer>("id"));
+        id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
         name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
         price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
         stock.setCellValueFactory(new PropertyValueFactory<Product,Integer>("stock"));
         availability.setCellValueFactory(new PropertyValueFactory<Product,String>("availability"));
 
-        products = Product.getProductsByName(productName);
+        //products = Product.getProductsByName(productName);
         tableView.setItems(products);
     }
 

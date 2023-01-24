@@ -55,7 +55,7 @@ public class LoginController {
 
         //after successful login, go to otp verification page
         if(login.customerLogin(email,password)){
-            
+
             //Send data to otp verification page
             FXMLLoader loader = new FXMLLoader(getClass().getResource("OTPFile.fxml"));
             root = loader.load();

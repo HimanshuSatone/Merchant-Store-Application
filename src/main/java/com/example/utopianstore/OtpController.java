@@ -12,6 +12,12 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Properties;
+import java.util.Random;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.swing.*;
 
 public class OtpController {
 
@@ -45,6 +51,10 @@ public class OtpController {
 
         email=email_id;
         emailLabel.setText(email);
+    }
+
+    public void Random(){
+        Random rd = new Random();
     }
 
     //Functionality for submit button

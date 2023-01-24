@@ -9,41 +9,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFF8DC;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.MainPageController">
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="684.0" style="-fx-background-color: #FFF8DC;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.MainPageController">
    <children>
-      <TableView fx:id="tableView" layoutX="201.0" layoutY="74.0" prefHeight="258.0" prefWidth="373.0">
+      <TableView fx:id="tableView" layoutX="206.0" layoutY="74.0" prefHeight="258.0" prefWidth="451.0">
         <columns>
           <TableColumn fx:id="id" prefWidth="75.0" text="Product Id" />
-          <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="price" prefWidth="75.0" text="Price($)" />
-            <TableColumn fx:id="availability" prefWidth="75.0" text="Availability" />
-            <TableColumn fx:id="stock" prefWidth="75.0" text="Stock" />
+          <TableColumn fx:id="name" prefWidth="165.0" text="Name" />
+            <TableColumn fx:id="price" prefWidth="58.0" text="Price($)" />
+            <TableColumn fx:id="availability" prefWidth="90.0" text="Availability" />
+            <TableColumn fx:id="stock" prefWidth="62.0" text="Stock" />
         </columns>
       </TableView>
-      <Button layoutX="256.0" layoutY="347.0" mnemonicParsing="false" text="Add to cart">
+      <Button layoutX="267.0" layoutY="347.0" mnemonicParsing="false" text="Add to cart">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button layoutX="437.0" layoutY="347.0" mnemonicParsing="false" text="Buy Now">
+      <Button layoutX="539.0" layoutY="347.0" mnemonicParsing="false" text="Buy Now">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
       <Label layoutX="22.0" layoutY="37.0" />
-      <AnchorPane layoutX="8.0" layoutY="13.0" prefHeight="374.0" prefWidth="174.0" style="-fx-background-color: #F08080;" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="418.0" AnchorPane.topAnchor="13.0">
+      <AnchorPane layoutX="8.0" layoutY="13.0" prefHeight="374.0" prefWidth="185.0" style="-fx-background-color: #F08080;" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="491.0" AnchorPane.topAnchor="13.0">
          <children>
-            <Button layoutX="11.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Mobile">
+            <Button fx:id="mobileButton" layoutX="11.0" layoutY="110.0" mnemonicParsing="false" onAction="#setMobileButton" prefHeight="25.0" prefWidth="144.0" text="Mobile">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
-            <Button layoutX="11.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Ipad">
+            <Button fx:id="ipadButton" layoutX="11.0" layoutY="153.0" mnemonicParsing="false" onAction="#setIpadButton" prefHeight="25.0" prefWidth="144.0" text="Ipad">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
-            <Button layoutX="11.0" layoutY="199.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Laptop">
+            <Button fx:id="laptopButton" layoutX="11.0" layoutY="199.0" mnemonicParsing="false" onAction="#setLaptopButton" prefHeight="25.0" prefWidth="144.0" text="Laptop">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
-            <Button layoutX="11.0" layoutY="241.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Smart Watch">
+            <Button fx:id="smartWatchButton" layoutX="11.0" layoutY="241.0" mnemonicParsing="false" onAction="#setSmartWatchButton" prefHeight="25.0" prefWidth="144.0" text="Smart Watch">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
@@ -61,18 +61,24 @@
                   <Font name="Berlin Sans FB" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="nameLabel" alignment="CENTER" layoutX="1.0" layoutY="42.0" prefHeight="31.0" prefWidth="174.0">
+            <Label fx:id="nameLabel" alignment="CENTER" layoutX="3.0" layoutY="42.0" prefHeight="31.0" prefWidth="174.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="searchButton" layoutX="498.0" layoutY="38.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="76.0" text="Search">
+      <Button fx:id="searchButton" layoutX="579.0" layoutY="38.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="76.0" text="Search">
          <font>
             <Font name="Berlin Sans FB" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="searchTextField" layoutX="201.0" layoutY="39.0" prefHeight="25.0" prefWidth="289.0" />
+      <TextField fx:id="searchTextField" layoutX="207.0" layoutY="39.0" prefHeight="25.0" prefWidth="362.0" />
+      <Button layoutX="393.0" layoutY="347.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Show Cart">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="221.0" layoutY="347.0" prefHeight="30.0" prefWidth="37.0" text="0" />
    </children>
 </AnchorPane>
