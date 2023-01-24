@@ -39,6 +39,18 @@ public class MainPageController implements Initializable {
     private Button searchButton;
     @FXML
     private TextField searchTextField;
+    @FXML
+    private Button mobileButton;
+    @FXML
+    private Button ipadButton;
+    @FXML
+    private Button smartWatchButton;
+    @FXML
+    private Button laptopButton;
+    @FXML
+    Label hiddenLabel;
+    @FXML
+    Label hiddenProductId;
 
     //Functionality for fetching data from sql product table to our table view
     @FXML
@@ -68,18 +80,11 @@ public class MainPageController implements Initializable {
         tableView.setItems(products);
     }
 
-    @FXML
-    Button mobileButton;
-    @FXML
-    Button ipadButton;
-    @FXML
-    Button smartWatchButton;
-    @FXML
-    Button laptopButton;
-
     //Functionality for Mobile Product button
     public void setMobileButton(ActionEvent event){
 
+        hiddenLabel.setText("mobile");
+        hiddenProductId.setText("mobileid");
         id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
         name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
         price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
@@ -93,6 +98,8 @@ public class MainPageController implements Initializable {
     //Functionality for Ipad Product button
     public void setIpadButton(ActionEvent event){
 
+        hiddenLabel.setText("ipad");
+        hiddenProductId.setText("ipadid");
         id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
         name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
         price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
@@ -106,6 +113,8 @@ public class MainPageController implements Initializable {
     //Functionality for Laptop Product button
     public void setLaptopButton(ActionEvent event){
 
+        hiddenLabel.setText("laptop");
+        hiddenProductId.setText("laptopid");
         id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
         name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
         price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
@@ -119,6 +128,8 @@ public class MainPageController implements Initializable {
     //Functionality for SmartWatch Product button
     public void setSmartWatchButton(ActionEvent event){
 
+        hiddenLabel.setText("smartwatch");
+        hiddenProductId.setText("smartwatchid");
         id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
         name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
         price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
@@ -129,11 +140,11 @@ public class MainPageController implements Initializable {
         tableView.setItems(products);
     }
 
-
-
     //Functionality for search button
     public void search(ActionEvent event){
 
+        String tableName = hiddenLabel.getText();
+        String productId = hiddenProductId.getText();
         String productName = searchTextField.getText();
         searchTextField.clear();
 
@@ -143,7 +154,7 @@ public class MainPageController implements Initializable {
         stock.setCellValueFactory(new PropertyValueFactory<Product,Integer>("stock"));
         availability.setCellValueFactory(new PropertyValueFactory<Product,String>("availability"));
 
-        //products = Product.getProductsByName(productName);
+        products = Product.getProductsByName(productName,tableName,productId);
         tableView.setItems(products);
     }
 

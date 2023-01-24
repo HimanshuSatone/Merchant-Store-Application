@@ -80,5 +80,19 @@
          </font>
       </Button>
       <Label layoutX="221.0" layoutY="347.0" prefHeight="30.0" prefWidth="37.0" text="0" />
+      <Label fx:id="hiddenLabel" layoutX="400.0" layoutY="14.0" prefHeight="17.0" prefWidth="86.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="298.0" layoutY="14.0" prefHeight="17.0" prefWidth="102.0" text="Current Product :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="hiddenProductId" layoutX="510.0" layoutY="15.0" prefHeight="17.0" prefWidth="86.0" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
