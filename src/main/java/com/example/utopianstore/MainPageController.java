@@ -27,6 +27,7 @@ public class MainPageController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private Product product;
 
     @FXML
     private Label nameLabel;
@@ -203,14 +204,41 @@ public class MainPageController implements Initializable {
     }
 
     //Functionality for buy now button
-    public void setBuyNow(ActionEvent event){
+    public void setBuyNow(ActionEvent event) throws IOException {
 
         Product selectedProduct = getSelectedProduct();
+
         if(Order.placeOrder(nameLabel.getText(),selectedProduct,hiddenProductId.getText())){
+
             System.out.println("Order Successful");
+
+            //Create alert when successful order placed
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Order Confirmation");
+            alert.setHeaderText(nameLabel.getText());
+            alert.setContentText("Order placed, happy shopping :) ");
+
+            //Some events on click of OK button on alert
+            if(alert.showAndWait().get() == ButtonType.OK){
+
+                stage = (Stage) scenePane.getScene().getWindow();
+            }
         }
         else{
+
             System.out.println("Order failed");
+
+            //Create alert when unsuccessful order
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Order Failed");
+            alert.setHeaderText(nameLabel.getText());
+            alert.setContentText("Order failed, please try again later :) ");
+
+            //Some events on click of OK button on alert
+            if(alert.showAndWait().get() == ButtonType.OK){
+
+                stage = (Stage) scenePane.getScene().getWindow();
+            }
         }
     }
 }
