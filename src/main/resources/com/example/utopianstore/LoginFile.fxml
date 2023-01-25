@@ -12,7 +12,7 @@
 
 <AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFAF0 #FFFAF0; -fx-background-image: ;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.LoginController">
    <children>
-      <Button layoutX="299.0" layoutY="205.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #8FBC8F;" text="Login" textAlignment="CENTER">
+      <Button layoutX="301.0" layoutY="205.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #8FBC8F;" text="Login" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>

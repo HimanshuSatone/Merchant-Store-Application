@@ -17,7 +17,7 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <TextField layoutX="249.0" layoutY="47.0" promptText="Himanshu">
+      <TextField fx:id="firstnameField" layoutX="249.0" layoutY="47.0" promptText="Himanshu">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></TextField>
@@ -29,7 +29,7 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <TextField layoutX="249.0" layoutY="168.0" promptText="9625688777">
+      <TextField fx:id="numberField" layoutX="249.0" layoutY="168.0" promptText="9625688777">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></TextField>
@@ -37,7 +37,7 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <TextField layoutX="249.0" layoutY="210.0" promptText="New Delhi">
+      <TextField fx:id="cityField" layoutX="249.0" layoutY="210.0" promptText="New Delhi">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></TextField>
@@ -45,7 +45,7 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <TextField layoutX="249.0" layoutY="252.0" promptText="example@abc.com">
+      <TextField fx:id="emailField" layoutX="249.0" layoutY="252.0" promptText="example@abc.com">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></TextField>
@@ -53,15 +53,15 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Button layoutX="342.0" layoutY="348.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Reset">
+      <Button layoutX="342.0" layoutY="348.0" mnemonicParsing="false" onAction="#setResetButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Reset">
          <font>
             <Font size="14.0" />
          </font></Button>
-      <PasswordField layoutX="249.0" layoutY="295.0" promptText="**********">
+      <PasswordField fx:id="passwordField" layoutX="249.0" layoutY="295.0" promptText="**********">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></PasswordField>
-      <TextField layoutX="249.0" layoutY="126.0" promptText="male/female">
+      <TextField fx:id="genderField" layoutX="249.0" layoutY="126.0" promptText="male/female">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -71,7 +71,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="248.0" layoutY="87.0" promptText="Satone">
+      <TextField fx:id="lastnameField" layoutX="248.0" layoutY="87.0" promptText="Satone">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

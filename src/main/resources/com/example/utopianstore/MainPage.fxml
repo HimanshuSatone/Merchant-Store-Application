@@ -24,35 +24,35 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button layoutX="539.0" layoutY="347.0" mnemonicParsing="false" text="Buy Now">
+      <Button fx:id="buyNowButton" layoutX="539.0" layoutY="347.0" mnemonicParsing="false" onAction="#setBuyNow" text="Buy Now">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
       <Label layoutX="22.0" layoutY="37.0" />
       <AnchorPane layoutX="8.0" layoutY="13.0" prefHeight="374.0" prefWidth="185.0" style="-fx-background-color: #F08080;" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="491.0" AnchorPane.topAnchor="13.0">
          <children>
-            <Button fx:id="mobileButton" layoutX="11.0" layoutY="110.0" mnemonicParsing="false" onAction="#setMobileButton" prefHeight="25.0" prefWidth="144.0" text="Mobile">
+            <Button fx:id="mobileButton" layoutX="11.0" layoutY="110.0" mnemonicParsing="false" onAction="#setMobileButton" prefHeight="26.0" prefWidth="160.0" text="Mobile">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
-            <Button fx:id="ipadButton" layoutX="11.0" layoutY="153.0" mnemonicParsing="false" onAction="#setIpadButton" prefHeight="25.0" prefWidth="144.0" text="Ipad">
+            <Button fx:id="ipadButton" layoutX="11.0" layoutY="153.0" mnemonicParsing="false" onAction="#setIpadButton" prefHeight="26.0" prefWidth="160.0" text="Ipad">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
-            <Button fx:id="laptopButton" layoutX="11.0" layoutY="199.0" mnemonicParsing="false" onAction="#setLaptopButton" prefHeight="25.0" prefWidth="144.0" text="Laptop">
+            <Button fx:id="laptopButton" layoutX="11.0" layoutY="199.0" mnemonicParsing="false" onAction="#setLaptopButton" prefHeight="26.0" prefWidth="160.0" text="Laptop">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
-            <Button fx:id="smartWatchButton" layoutX="11.0" layoutY="241.0" mnemonicParsing="false" onAction="#setSmartWatchButton" prefHeight="25.0" prefWidth="144.0" text="Smart Watch">
+            <Button fx:id="smartWatchButton" layoutX="11.0" layoutY="241.0" mnemonicParsing="false" onAction="#setSmartWatchButton" prefHeight="26.0" prefWidth="160.0" text="Smart Watch">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
-            <Separator layoutX="10.0" layoutY="79.0" prefHeight="3.0" prefWidth="153.0" />
-            <Button fx:id="logoutButton" layoutX="92.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="69.0" text="Logout">
+            <Separator layoutX="10.0" layoutY="79.0" prefHeight="4.0" prefWidth="160.0" />
+            <Button fx:id="logoutButton" layoutX="96.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="76.0" text="Logout">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
-            <Button fx:id="settingButton" layoutX="10.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="76.0" text="Settings">
+            <Button fx:id="settingButton" layoutX="13.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="76.0" text="Settings">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>

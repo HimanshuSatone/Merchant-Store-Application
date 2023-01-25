@@ -19,6 +19,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLOutput;
 import java.util.ResourceBundle;
 
 public class MainPageController implements Initializable {
@@ -48,9 +49,11 @@ public class MainPageController implements Initializable {
     @FXML
     private Button laptopButton;
     @FXML
-    Label hiddenLabel;
+    private Label hiddenLabel;
     @FXML
-    Label hiddenProductId;
+    private Label hiddenProductId;
+    @FXML
+    private Button buyNowButton;
 
     //Functionality for fetching data from sql product table to our table view
     @FXML
@@ -185,5 +188,29 @@ public class MainPageController implements Initializable {
     //Functionality to display username on welcome bar
     public void displayName(String userEmail){
         nameLabel.setText(userEmail);
+    }
+
+    //Functionality to select product from table
+    public  Product getSelectedProduct(){
+
+        try{
+            Product selectProduct = tableView.getSelectionModel().getSelectedItem();
+            return selectProduct;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    //Functionality for buy now button
+    public void setBuyNow(ActionEvent event){
+
+        Product selectedProduct = getSelectedProduct();
+        if(Order.placeOrder(nameLabel.getText(),selectedProduct,hiddenProductId.getText())){
+            System.out.println("Order Successful");
+        }
+        else{
+            System.out.println("Order failed");
+        }
     }
 }
