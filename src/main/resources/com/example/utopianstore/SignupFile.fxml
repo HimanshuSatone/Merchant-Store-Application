@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFAF0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.SignupController">
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFAF0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.SignupController">
    <children>
-      <Button layoutX="165.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #90EE90;" text="Signup">
+      <Button layoutX="165.0" layoutY="348.0" mnemonicParsing="false" onAction="#setSignupButton" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #90EE90;" text="Signup">
          <font>
             <Font size="14.0" />
          </font></Button>

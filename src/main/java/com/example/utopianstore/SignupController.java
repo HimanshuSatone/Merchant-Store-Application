@@ -6,9 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,23 +19,27 @@ public class SignupController {
     private Parent root;
 
     @FXML
-    Button backButton;
+    private Button backButton;
     @FXML
-    Button resetButton;
+    private Button resetButton;
     @FXML
-    TextField firstnameField;
+    private TextField firstnameField;
     @FXML
-    TextField lastnameField;
+    private TextField lastnameField;
     @FXML
-    TextField genderField;
+    private TextField genderField;
     @FXML
-    TextField numberField;
+    private TextField numberField;
     @FXML
-    TextField cityField;
+    private TextField cityField;
     @FXML
-    TextField emailField;
+    private TextField emailField;
     @FXML
-    PasswordField passwordField;
+    private PasswordField passwordField;
+    @FXML
+    Button signupButton;
+    @FXML
+    AnchorPane scenePane;
 
     //Functionality for back button
     public void setBackButton(ActionEvent event) throws IOException {
@@ -49,14 +52,57 @@ public class SignupController {
 
     }
 
-    //Function to switch to login page on click to signup button
-    public void switchToLogin(ActionEvent event) throws IOException {
+    //Functionality for signup button
+    public void setSignupButton(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("LoginFile.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        String firstName = firstnameField.getText();
+        String lastName = lastnameField.getText();
+        String gender = genderField.getText();
+        String number = numberField.getText();
+        String city = cityField.getText();
+        String email = emailField.getText();
+        String password = passwordField.getText();
+
+        if(UserDetails.makeNewCustomerData(firstName, lastName, gender, city, email, password, number)){
+
+            System.out.println("Customer Details added");
+
+            //Create alert when successful customer details
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Welcome");
+            alert.setHeaderText(firstName);
+            alert.setContentText("Welcome to Utopian.llp :) ");
+
+            //Some events on click of OK button on alert
+            if(alert.showAndWait().get() == ButtonType.OK){
+
+                stage = (Stage) scenePane.getScene().getWindow();
+
+                stage = (Stage) scenePane.getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getResource("LoginFile.fxml"));
+                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+
+            }
+        }
+        else{
+
+            System.out.println("error");
+
+            //Create alert when unsuccessful customer details
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(firstName);
+            alert.setContentText("Sorry we couldn't proceed your request :( ");
+
+            //Some events on click of OK button on alert
+            if(alert.showAndWait().get() == ButtonType.OK){
+
+                stage = (Stage) scenePane.getScene().getWindow();
+            }
+        }
     }
 
     //Functionality for reset button
