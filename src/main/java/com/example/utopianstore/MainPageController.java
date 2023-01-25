@@ -74,6 +74,8 @@ public class MainPageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        hiddenLabel.setText("mobile");
+        hiddenProductId.setText("mobileid");
         id.setCellValueFactory(new PropertyValueFactory<Product,String>("id"));
         name.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
         price.setCellValueFactory(new PropertyValueFactory<Product,Integer>("price"));
