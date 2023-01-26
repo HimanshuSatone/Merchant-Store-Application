@@ -11,6 +11,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 
 public class SignupController {
 
@@ -63,7 +66,7 @@ public class SignupController {
         String email = emailField.getText();
         String password = passwordField.getText();
 
-        if(UserDetails.makeNewCustomerData(firstName, lastName, gender, city, email, password, number)){
+        if(UserDetails.makeNewCustomerData(firstName, lastName, gender, city, email, getEncryptedPassword(password), number)){
 
             System.out.println("Customer Details added");
 
@@ -116,4 +119,31 @@ public class SignupController {
         emailField.clear();
         passwordField.clear();
     }
+
+    //Functions to encrypt input string using SHA-256 encryption
+    private byte[] getSHA(String input){
+
+        try{
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            return md.digest(input.getBytes(StandardCharsets.UTF_8));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    //Function to get encrypted input in form of 16 bit string
+    private String getEncryptedPassword(String password){
+
+        String encryptedPassword = null;
+        try{
+            BigInteger number = new BigInteger(1,getSHA(password));
+            StringBuilder hexString = new StringBuilder(number.toString(16));
+            return hexString.toString();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

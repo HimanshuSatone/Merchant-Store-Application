@@ -37,7 +37,8 @@ public class Login {
     //Function to do login from credentials stores in the table
     public boolean customerLogin(String email, String password){
 
-        String query = String.format("select * from customer where email = '%s' and password = '%s' ",email,password);
+        String query = String.format("select * from customer where email = '%s' and password = '%s' ",email,getEncryptedPassword(password));
+
         try{
             DatabaseConnection dbCon = new DatabaseConnection();
             ResultSet rs = dbCon.getQueryTable(query);
