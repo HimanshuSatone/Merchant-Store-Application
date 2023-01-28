@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.UserDetailsController">
+   <children>
+      <Button layoutX="360.0" layoutY="322.0" mnemonicParsing="false" onAction="#setUpdateCompleteButton" prefHeight="30.0" prefWidth="279.0" style="-fx-background-color: #90EE90;" text="Update Complete">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="160.0" layoutY="121.0" text="First Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstnameField" layoutX="241.0" layoutY="117.0" promptText="Himanshu">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="160.0" layoutY="200.0" text="Gender">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="160.0" layoutY="242.0" text="Number">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numberField" layoutX="241.0" layoutY="238.0" promptText="9625688777">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="160.0" layoutY="284.0" text="City">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cityField" layoutX="241.0" layoutY="280.0" promptText="New Delhi">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="547.0" layoutY="116.0" mnemonicParsing="false" onAction="#setClearFirstNameButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Clear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="genderField" layoutX="241.0" layoutY="196.0" promptText="male/female">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="159.0" layoutY="161.0" text="Last Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lastnameField" layoutX="240.0" layoutY="157.0" promptText="Satone">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="14.0" layoutY="400.0" mnemonicParsing="false" onAction="#setBackButton" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: #000000;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateFirstNameButton" layoutX="444.0" layoutY="116.0" mnemonicParsing="false" onAction="#setFirstNameUpdateButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Update">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateLastNameButton" layoutX="444.0" layoutY="156.0" mnemonicParsing="false" onAction="#setLastNameUpdateButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Update">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateGenderButton" layoutX="444.0" layoutY="196.0" mnemonicParsing="false" onAction="#setGenderUpdateButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Update">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateNumberButton" layoutX="444.0" layoutY="237.0" mnemonicParsing="false" onAction="#setNumberUpdateButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Update">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateCityButton" layoutX="444.0" layoutY="279.0" mnemonicParsing="false" onAction="#setCityUpdateButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Update">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableView" layoutX="11.0" layoutY="13.0" prefHeight="72.0" prefWidth="725.0">
+        <columns>
+          <TableColumn fx:id="firstName_column" prefWidth="75.0" text="First Name" />
+          <TableColumn fx:id="lastName_column" text="Last Name" />
+            <TableColumn fx:id="number_column" prefWidth="121.0" text="Number" />
+            <TableColumn fx:id="city_column" prefWidth="92.0" text="City" />
+            <TableColumn fx:id="email_column" prefWidth="146.0" text="Email" />
+            <TableColumn fx:id="password_column" prefWidth="110.0" text="Password" />
+            <TableColumn fx:id="gender_column" prefWidth="100.0" text="Gender" />
+        </columns>
+      </TableView>
+      <Label fx:id="hiddenEmailLabel" layoutX="14.0" layoutY="105.0" prefHeight="17.0" prefWidth="135.0" text="Label" visible="false" />
+      <Button layoutX="151.0" layoutY="322.0" mnemonicParsing="false" onAction="#setShowDetails" prefHeight="30.0" prefWidth="201.0" style="-fx-background-color: #90EE90;" text="Show Details">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="547.0" layoutY="156.0" mnemonicParsing="false" onAction="#setClearLastNameButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Clear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="547.0" layoutY="196.0" mnemonicParsing="false" onAction="#setClearGenderButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Clear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="547.0" layoutY="237.0" mnemonicParsing="false" onAction="#setClearNumberButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Clear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="547.0" layoutY="279.0" mnemonicParsing="false" onAction="#setClearCityButton" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #F08080;" text="Clear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

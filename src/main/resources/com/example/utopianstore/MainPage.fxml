@@ -52,7 +52,7 @@
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>
-            <Button fx:id="settingButton" layoutX="13.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="76.0" text="Settings">
+            <Button fx:id="settingButton" layoutX="13.0" layoutY="332.0" mnemonicParsing="false" onAction="#setSettingButton" prefHeight="30.0" prefWidth="76.0" text="Settings">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></Button>

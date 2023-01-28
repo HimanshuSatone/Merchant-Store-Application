@@ -243,4 +243,21 @@ public class MainPageController implements Initializable {
             }
         }
     }
+
+    //Functionality for setting button
+    public void setSettingButton(ActionEvent event) throws IOException {
+
+        //Go to Setting option page
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SettingFile.fxml"));
+        root = loader.load();
+
+        //Send data from MainPageController to Setting Controller
+        SettingController settingController = loader.getController();
+        settingController.getEmailId(nameLabel.getText());
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
