@@ -1,7 +1,7 @@
 # Merchant-Store-Application
 This is a normal merchant store application where user can buy from the variety of available products.
 
-User Interface functionality:-
+User Interface functionalities:-
 1. User can signup and do login to see or buy the products.
 2. User can choose from multiple categories of the products.
 3. User can choose prduct from the particular category of product.
