@@ -38,3 +38,7 @@ Sreenshots:-
 7. Exit Button Popup:- ![ExitPopup](https://user-images.githubusercontent.com/104511724/215264106-c6293377-0576-4042-b338-e6543353c3ba.png)
 8. Successful Order Placed:- ![OrderPlacePopup](https://user-images.githubusercontent.com/104511724/215264146-e08f615c-42cb-437e-8fed-705381349e63.png)
 9. Failed Order:- ![OrderFailedPopup](https://user-images.githubusercontent.com/104511724/215264162-fe1ea3f5-6175-413b-9e75-e7b8eb5825c8.png)
+10. Setting Page:- ![SettingPage](https://user-images.githubusercontent.com/104511724/215282209-43aefa8e-ec11-46c2-a62f-3c4ef585014b.png)
+11. UserDetails Page:- ![UserDetailsPage](https://user-images.githubusercontent.com/104511724/215282230-b7444fca-f3f8-4eb4-8343-4cae724e8576.png)
+12. Successful update Popup:- ![SuccessfulUpdatePopup](https://user-images.githubusercontent.com/104511724/215282263-372946eb-3a92-461b-b5c4-98e2c9bfff80.png)
+13. Popup Before leaving the User Details page:- ![PopupBeforeLeavingThePage](https://user-images.githubusercontent.com/104511724/215282288-2a0f82f8-ba2a-4205-8b93-da70d9261f08.png)
