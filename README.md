@@ -6,7 +6,8 @@ User Interface functionality:-
 2. User can choose from multiple categories of the products.
 3. User can choose prduct from the particular category of product.
 4. User can Search the particualr product from the search bar.
-5. User can logout from the application after completing the buying process.
+5. User can update it's details from the setting tab.
+6. User can logout from the application after completing the buying process.
 
 General flow of the application:-
 1. User can login from in to application from the appropriate email and password.
@@ -19,12 +20,14 @@ General flow of the application:-
 8. If buying process is successful, new order will be created in the order table and user will get a pop "Order Successful".
 9. After buying a product user can wish to buy more products or simply logout from the application.
 
-Future functionalities(to be added):-
+Additional Functionality:-
 1. User can update it's details from the setting tab.
-2. User can see list of products he/she ordered and cancel one/all the orders.
-3. Setup two factor authentication by adding OTP functionality.
-4. User can add multiple product in one cart and then review it beofre buying.
-5. Cart feature will let user to buy multiple desired products at single click.
+
+Future functionalities(to be added):-
+1. User can see list of products he/she ordered and cancel one/all the orders.
+2. Setup two factor authentication by adding OTP functionality.
+3. User can add multiple product in one cart and then review it beofre buying.
+4. Cart feature will let user to buy multiple desired products at single click.
 
 Sreenshots:- 
 
