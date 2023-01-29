@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="223.0" prefWidth="389.0" style="-fx-background-color: #FFFAF0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utopianstore.SettingController">
    <children>
-      <Button layoutX="116.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" text="Order Details">
+      <Button layoutX="116.0" layoutY="75.0" mnemonicParsing="false" onAction="#setOrderDetailsButton" prefHeight="25.0" prefWidth="157.0" text="Order Details">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="15.0" />
          </font>

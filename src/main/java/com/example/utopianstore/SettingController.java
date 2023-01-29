@@ -25,10 +25,10 @@ public class SettingController {
         hiddenEmailLabel.setText(email);
     }
 
-    //Functionality to set or see current user details
+    //Functionality to see or update current user details
     public void setUserDetailsButton(ActionEvent event) throws IOException {
 
-        //Go to main page after successful otp verification
+        //Go to User Details page
         FXMLLoader loader = new FXMLLoader(getClass().getResource("UserDetailsFile.fxml"));
         root = loader.load();
 
@@ -52,6 +52,23 @@ public class SettingController {
         //Send data from SettingController to MainPageController
         MainPageController mainPageController = loader.getController();
         mainPageController.displayName(hiddenEmailLabel.getText());
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    //Functionality to see or update order details
+    public void setOrderDetailsButton(ActionEvent event) throws IOException {
+
+        //Go to User Details page
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("OrderDetailsFile.fxml"));
+        root = loader.load();
+
+        //Send data from SettingController to OrderDetailsController
+        OrderDetailsController orderDetailsController = loader.getController();
+        orderDetailsController.getEmailId(hiddenEmailLabel.getText());
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
