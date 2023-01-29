@@ -22,12 +22,12 @@ General flow of the application:-
 
 Additional Functionality:-
 1. User can update it's details from the setting tab.
+2. User can see list of products he/she ordered and cancel one/all the orders..
 
 Future functionalities(to be added):-
-1. User can see list of products he/she ordered and cancel one/all the orders.
-2. Setup two factor authentication by adding OTP functionality.
-3. User can add multiple product in one cart and then review it beofre buying.
-4. Cart feature will let user to buy multiple desired products at single click.
+1. Setup two factor authentication by adding OTP functionality.
+2. User can add multiple product in one cart and then review it beofre buying.
+3. Cart feature will let user to buy multiple desired products at single click.
 
 Sreenshots:- 
 
@@ -45,3 +45,5 @@ Sreenshots:-
 11. UserDetails Page:- ![UserDetailsPage](https://user-images.githubusercontent.com/104511724/215282230-b7444fca-f3f8-4eb4-8343-4cae724e8576.png)
 12. Successful update Popup:- ![SuccessfulUpdatePopup](https://user-images.githubusercontent.com/104511724/215282263-372946eb-3a92-461b-b5c4-98e2c9bfff80.png)
 13. Popup Before leaving the User Details page:- ![PopupBeforeLeavingThePage](https://user-images.githubusercontent.com/104511724/215282288-2a0f82f8-ba2a-4205-8b93-da70d9261f08.png)
+14. Order Details page:- ![OrderDetails](https://user-images.githubusercontent.com/104511724/215303715-a4d3ae1a-3bb9-465f-b29e-ce5a35ca76d9.png)
+15. Successful Order Delete Popup:- ![OrderDeletePopup](https://user-images.githubusercontent.com/104511724/215303756-5c135418-6bbd-4b46-b77d-b2d83ed1d748.png)
